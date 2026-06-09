@@ -1,128 +1,331 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate Listening Exercise</title>
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
 
-.container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
 
-h1,h2{
-    color:#2c3e50;
-}
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
-}
+    .info-box {
+      background-color: #eef5ff;
+      padding: 15px;
+      border-left: 5px solid #3498db;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
 
-input{
-    padding:8px;
-    margin:5px;
-}
+    .video-link a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
-}
+    .section-title {
+      margin-top: 35px;
+      color: #34495e;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
 
-button:hover{
-    background:#2980b9;
-}
+    .question {
+      background-color: #fafafa;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
 
-.correct{
-    color:green;
-    font-weight:bold;
-}
+    .question p {
+      font-weight: bold;
+    }
 
-.wrong{
-    color:red;
-    font-weight:bold;
-}
-</style>
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      min-height: 70px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 30px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .wrong {
+      color: red;
+    }
+
+    .answer-key {
+      margin-top: 40px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .answer-key h3 {
+      color: #2c3e50;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-<hr>
+    <h1>INTERMEDIATE LISTENING EXERCISE</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+    <div class="info-box">
+      <strong>Instructions:</strong><br>
+      Watch the video carefully. Then answer the questions below.
+    </div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+    <div class="video-link">
+      <strong>Video Link:</strong><br>
+      <a href="https://youtu.be/Kk-iqR26pM4?si=aZJScgoFcC6OmMjG" target="_blank">
+        Watch Video
+      </a>
+    </div>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+    <h2 class="section-title">True or False Questions</h2>
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+    <form id="quizForm">
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+      <div class="question">
+        <p>1. The story is called The Unexpected Shortcut.</p>
+        <label><input type="radio" name="q1" value="T"> True</label>
+        <label><input type="radio" name="q1" value="F"> False</label>
+      </div>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+      <div class="question">
+        <p>2. The weather on Saturday morning was sunny and warm.</p>
+        <label><input type="radio" name="q2" value="T"> True</label>
+        <label><input type="radio" name="q2" value="F"> False</label>
+      </div>
 
-<button onclick="checkAnswers()">Check Answers</button>
+      <div class="question">
+        <p>3. Mark needed to buy groceries and pick up a birthday cake.</p>
+        <label><input type="radio" name="q3" value="T"> True</label>
+        <label><input type="radio" name="q3" value="F"> False</label>
+      </div>
 
-<p id="result"></p>
+      <div class="question">
+        <p>4. Mark was early for all of his errands.</p>
+        <label><input type="radio" name="q4" value="T"> True</label>
+        <label><input type="radio" name="q4" value="F"> False</label>
+      </div>
 
-<hr>
+      <div class="question">
+        <p>5. The traffic was getting worse.</p>
+        <label><input type="radio" name="q5" value="T"> True</label>
+        <label><input type="radio" name="q5" value="F"> False</label>
+      </div>
 
-<h2>Part B: Write About Your Family</h2>
+      <div class="question">
+        <p>6. Mark decided to take a shortcut because his GPS said he would be late.</p>
+        <label><input type="radio" name="q6" value="T"> True</label>
+        <label><input type="radio" name="q6" value="F"> False</label>
+      </div>
 
-<p>Write 5–8 sentences about your family.</p>
+      <div class="question">
+        <p>7. The side street was crowded with many cars.</p>
+        <label><input type="radio" name="q7" value="T"> True</label>
+        <label><input type="radio" name="q7" value="F"> False</label>
+      </div>
 
-<textarea placeholder="My name is..."></textarea>
+      <div class="question">
+        <p>8. Mark’s car hit a pothole on the dirt path.</p>
+        <label><input type="radio" name="q8" value="T"> True</label>
+        <label><input type="radio" name="q8" value="F"> False</label>
+      </div>
 
-</div>
+      <div class="question">
+        <p>9. The birthday cake stayed perfect after the accident.</p>
+        <label><input type="radio" name="q9" value="T"> True</label>
+        <label><input type="radio" name="q9" value="F"> False</label>
+      </div>
 
-<script>
-function checkAnswers(){
+      <div class="question">
+        <p>10. In the end, Mark became very angry and shouted loudly.</p>
+        <label><input type="radio" name="q10" value="T"> True</label>
+        <label><input type="radio" name="q10" value="F"> False</label>
+      </div>
 
-let score = 0;
+      <h2 class="section-title">Short Answer Questions</h2>
 
-const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
-};
+      <div class="question">
+        <p>1. What errands did Mark need to do?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+      <div class="question">
+        <p>2. Why did Mark decide to take a shortcut?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
 
-if(user === answers[id]){
-score++;
-}
-}
+      <div class="question">
+        <p>3. What happened to Mark’s car on the dirt path?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
-}
-</script>
+      <div class="question">
+        <p>4. What does the phrase “in a pickle” mean in the story?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <div class="question">
+        <p>5. What challenge did the speaker give to the listeners at the end?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">
+        Submit Answers
+      </button>
+
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <div class="answer-key">
+      <h3>Answer Key</h3>
+
+      <h4>True or False</h4>
+      <ol>
+        <li>True</li>
+        <li>False</li>
+        <li>True</li>
+        <li>False</li>
+        <li>True</li>
+        <li>True</li>
+        <li>False</li>
+        <li>True</li>
+        <li>False</li>
+        <li>False</li>
+      </ol>
+
+      <h4>Short Answer</h4>
+      <ol>
+        <li>He needed to pick up a birthday cake, buy groceries, and drop off a package.</li>
+        <li>Because the traffic was bad and he was going to be late.</li>
+        <li>His car hit a pothole and the engine stopped working.</li>
+        <li>It means being in a difficult or tricky situation.</li>
+        <li>The listeners should read the story again and practice reading it out loud.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <script>
+
+    function checkAnswers() {
+
+      const answers = {
+        q1: "T",
+        q2: "F",
+        q3: "T",
+        q4: "F",
+        q5: "T",
+        q6: "T",
+        q7: "F",
+        q8: "T",
+        q9: "F",
+        q10: "F"
+      };
+
+      let score = 0;
+      let total = 10;
+
+      for (let key in answers) {
+
+        let options = document.getElementsByName(key);
+
+        for (let option of options) {
+
+          let parent = option.parentElement;
+
+          parent.style.color = "#333";
+
+          if (option.checked) {
+
+            if (option.value === answers[key]) {
+              score++;
+              parent.style.color = "green";
+            } else {
+              parent.style.color = "red";
+            }
+
+          }
+
+        }
+
+      }
+
+      const result = document.getElementById("result");
+
+      result.innerHTML = `Your True or False Score: ${score} out of ${total}`;
+
+      if (score === total) {
+        result.className = "result correct";
+      } else {
+        result.className = "result wrong";
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
